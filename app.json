@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "圣宏家居",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#000",
+    "selectedColor": "#ff2132",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/img/index.png",
+        "selectedIconPath": "assets/img/indexon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "分类",
+        "iconPath": "assets/img/my.png",
+        "selectedIconPath": "assets/img/myon.png"
+      }
+    ]
+  }
+}

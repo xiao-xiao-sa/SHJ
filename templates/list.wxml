@@ -1,0 +1,7 @@
+<template name="goodsShelves">
+    <navigator url="{{shopId}}" class='goods-connection'>
+      <view class='goods-title'>{{goodsTitle}}</view>
+      <image src='{{imgPath}}' class='goods-img'></image>
+    </navigator>
+</template>
+

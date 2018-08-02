@@ -1,0 +1,15 @@
+.goods-connection{
+  display: block;
+  width: 700rpx;
+  margin:30rpx auto 0;
+}
+.goods-title{
+  font-size: 28rpx;
+  padding-left: 10rpx;
+  border-left: 4rpx solid #ff2132;
+  margin-bottom:25rpx;
+}
+.goods-img{
+  width: 100%;
+  height: 210rpx;
+}
