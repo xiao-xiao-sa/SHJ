@@ -1,0 +1,101 @@
+/* pages/order/order.wxss */
+.tab-h{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width:100%;
+	height: 80rpx;
+	background-color: #fff;
+	line-height: 80rpx;
+	border-bottom: 1px solid #efefef;
+	position:  fixed;
+	top:0;
+	left:0;
+  z-index:10;
+}
+.tab-item.active{
+	  color: #f43333;
+  	position: relative;
+  	border-bottom: 6rpx solid #f43333;
+}
+.tab-content{
+	width: 100%;
+	margin-top: 80rpx;
+}
+.order-top{
+	height: 75rpx;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	line-height: 75rpx;
+	background-color: #fff;
+	padding:0 20rpx;
+}
+.green{
+	color:#f43333;
+}
+.order-middle{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding:15rpx 20rpx;
+	background-color:#fafafa; 
+}
+.order-middle image{
+	width:150rpx;
+	height: 150rpx;
+}
+.order-center{
+	width:340rpx;
+}
+.order-right{
+	text-align: right;
+	width: 180rpx;
+}
+.order-bottom{
+	background-color: #fff;
+	color:#666;
+}
+.bottom-one{
+	text-align: right;
+	height: 84rpx;
+	line-height: 84rpx;
+	padding-right: 20rpx;
+	border-bottom: 1px solid #efefef;
+}
+.bottom-two{
+	height: 84rpx;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	padding-right:20rpx;
+}
+.bottom-two button{
+	width: 162rpx;
+	height: 52rpx;
+	border-radius: 26rpx;
+	border:1px solid #666;
+	text-align: center;
+	line-height: 52rpx;
+	margin-left:30rpx;
+	margin-top:16rpx;
+	margin-right: 0;
+	font-size: 24rpx;
+}
+.bottom-two button.green{
+	border:1px solid #f43333;
+}
+.order-item{
+	margin-bottom:20rpx;
+}
+.no-order image{
+	width:200rpx; 
+	height:200rpx;
+	margin-bottom: 50rpx;
+}
+.no-order{
+	color:#666;
+	text-align: center;
+	margin-top:200rpx;
+	font-size: 30rpx;
+}

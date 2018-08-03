@@ -1,7 +1,17 @@
 <template name="goodsShelves">
-    <navigator url="{{shopId}}" class='goods-connection'>
+    <navigator url="/pages/shopDetail/shopDetail?shopId={{shopId}}" class='goods-connection'>
       <view class='goods-title'>{{goodsTitle}}</view>
       <image src='{{imgPath}}' class='goods-img'></image>
     </navigator>
 </template>
 
+<template name="banner">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:{{bannerHeights[current]}}rpx;width:100%;">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" bindload="imageLoad" style="height:{{bannerHeights[current]}}rpx;width:{{bannerWidth}}rpx;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

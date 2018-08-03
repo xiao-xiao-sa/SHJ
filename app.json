@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/shopDetail/shopDetail",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,7 +25,7 @@
       },
       {
         "pagePath": "pages/my/my",
-        "text": "分类",
+        "text": "我的",
         "iconPath": "assets/img/my.png",
         "selectedIconPath": "assets/img/myon.png"
       }

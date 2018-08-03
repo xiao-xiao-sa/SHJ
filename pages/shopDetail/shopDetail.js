@@ -1,16 +1,37 @@
-// pages/my/my.js
+// pages/shopDetail/shopDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-    userInfo:{
-      avatarUrl:'/assets/img/ava@2x.png',
-      nickName:'舒心者'
-    }
+  data: { 
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
+    shopInfo:{
+      imgUrls: [ //商品详情轮播图片
+        '/assets/img/asdj@2x.png'
+      ],
+      title: "林氏木业北欧沙发家具小户型木框客厅现代简约组合",//标题
+      price:200, //价格
+      originalPrice:300, //原价
+      freight: 1000, //运费
+      sale: 630, //销量
+      surplus: 863, //剩余
+      shopDetailImg: '/assets/img/asdj@2x.png', //商品详情的图片
+    },
+    shopDIH:0
   },
-
+  shopDIL:function(e){
+    var imgwidth = e.detail.width,
+      imgheight = e.detail.height,
+      ratio = imgwidth / imgheight;
+    var viewHeight = 750 / ratio;
+    this.setData({
+      shopDIH: viewHeight
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

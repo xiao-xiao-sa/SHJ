@@ -1,0 +1,29 @@
+<!--pages/shopDetail/shopDetail.wxml-->
+<banner 
+  imgUrls='{{shopInfo.imgUrls}}'
+  indicatorDots='{{indicatorDots}}'
+  autoplay='{{autoplay}}'
+  interval='{{interval}}'
+  duration='{{duration}}'
+></banner>
+<view class='shop-header'>
+  <view class='top'>
+    <view class='title'>{{shopInfo.title}}</view>
+    <view class='price'><text>￥</text>{{shopInfo.price}}</view>
+    <view class='oprice'>原价￥{{shopInfo.originalPrice}}</view>
+    <button class='share' open-type="share">
+      <text class='iconfont icon-fenxiang'></text>
+      <view>分享</view>
+    </button>
+  </view>
+  <view class='bottom'>
+    <text>运费：￥{{shopInfo.freight}}</text>
+    <text>销量：{{shopInfo.sale}}</text>
+    <text>剩余：{{shopInfo.surplus}}</text>
+  </view>
+</view>
+
+<view class='shop-content'>
+  <view>商品详情</view>
+  <image src='{{shopInfo.shopDetailImg}}' bindload="shopDIL" style='width:750rpx;height:{{shopDIH}}rpx'></image>
+</view>

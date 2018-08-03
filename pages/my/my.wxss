@@ -1,1 +1,90 @@
 /* pages/my/my.wxss */
+.header{
+	height: 240rpx;
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+  background:linear-gradient(to top,#da4233, #e05e3a);
+}
+.header .bg{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 750rpx;
+  height: 76rpx;
+}
+.header .ava{
+	position: absolute;
+	width:130rpx;
+	height: 130rpx;
+	top:20rpx;
+	left:310rpx;
+  border-radius: 50%;
+}
+.header .name{
+	position: absolute;
+	width:100%;
+	text-align: center;
+	top:180rpx;
+	left:0;
+	color:#fff;
+  font-size: 24rpx;
+}
+.order{
+	width: 100%;
+	background-color: #fff;
+}
+.order-top{
+	height: 75rpx;
+	width: 100%;
+	line-height: 80rpx;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding:0 25rpx;
+	border-bottom: 1px solid #efefef;
+	color:#666;
+  font-size: 28rpx;
+}
+.order-bottom{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 100%;
+	height: 150rpx;
+  box-sizing: border-box;
+  padding-top:20rpx;
+}
+.order-bottom navigator{
+  text-align: center;
+}
+.order-bottom .iconfont{
+  font-size: 50rpx;
+  color: #ff2132;
+}
+.order-bottom view{
+  text-align: center; 
+  height: 100rpx;
+  font-size: 24rpx;
+  margin-top:10rpx;
+}
+.about{
+  margin-top: 20rpx;
+  width: 100%;
+}
+.about .row{
+  width: 100%;
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  background-color: #fff;
+  border-bottom:2rpx solid #e6e6e6; 
+  position: relative;
+}
+.about .row .icon-gengduo{
+  position: absolute;
+  right: 25rpx;
+}

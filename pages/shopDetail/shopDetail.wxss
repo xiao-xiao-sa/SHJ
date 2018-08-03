@@ -1,0 +1,76 @@
+/* pages/shopDetail/shopDetail.wxss */
+.shop-header{
+  width: 100%;
+  background-color: #fff;  
+}
+.shop-header .top{
+  position: relative;
+  padding: 0 25rpx;
+}
+.shop-header .top .title{
+  font-size: 32rpx;
+  color: #333;
+  width: 558rpx;
+  padding:15rpx 0;
+}
+.shop-header .top .price{
+  font-size: 48rpx;
+  color: #e41616;
+}
+.shop-header .top .price text{
+  font-size: 32rpx;
+}
+.shop-header .top .oprice{
+  font-size: 24rpx;
+  color: #bababa;
+  text-decoration:line-through;
+  margin-bottom: 10rpx;
+}
+.shop-header .top .share{
+  position: absolute;
+  top:0;
+  right: 25rpx;
+  background-color:transparent;
+  border:none;
+  outline: none; 
+  font-size: 24rpx;
+  padding:0;
+}
+.shop-header .top .share::after{
+  border:none;
+}
+.shop-header .top .share .iconfont{
+  font-size: 40rpx;
+  color: #999;
+}
+.shop-header .top .share view{
+  position: relative;
+  top:-40rpx;
+  color: #999;
+}
+.shop-header .bottom{
+  width: 100%;
+  height: 65rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  line-height: 65rpx;
+  color: #999;
+  font-size: 24rpx;
+  border-top: 1rpx solid #999;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.shop-content{
+  width: 100%;
+  margin-top:20rpx;
+}
+.shop-content view{
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+}
