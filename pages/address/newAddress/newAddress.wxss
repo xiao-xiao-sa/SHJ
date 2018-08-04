@@ -1,0 +1,71 @@
+/* pages/address/newAddress/newAddress.wxss */
+.row{
+  background-color: #fff;
+  height: 80rpx;
+  width:100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #efefef;
+  line-height: 80rpx;
+  padding:0 25rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.row input{
+  width:550rpx;
+  height: 100%;
+}
+.picker{
+  width:700rpx;
+}
+.picker text{
+  display: inline-block;
+  margin-right:20rpx;
+}
+.detail{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding:20rpx 25rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+}
+.area{
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding:0 25rpx;
+  border-bottom: 1px solid #efefef;
+}
+.detail textarea{
+  height:100rpx; 
+  width:560rpx;
+}
+.default{
+  background-color: #fff;
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding:0 25rpx;
+  line-height: 80rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.detail text{
+  display: block;
+  width: 140rpx;
+}
+.submit-btn{
+  height: 80rpx;
+  width: 700rpx;
+  background-color: #f43333;
+  border-radius: 10rpx;
+  margin:50rpx auto;
+  color: #fff;
+}

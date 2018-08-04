@@ -27,3 +27,4 @@
   <view>商品详情</view>
   <image src='{{shopInfo.shopDetailImg}}' bindload="shopDIL" style='width:750rpx;height:{{shopDIH}}rpx'></image>
 </view>
+<navigator class='buy' url=''>立即购买</navigator>

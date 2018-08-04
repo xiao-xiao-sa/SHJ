@@ -1,0 +1,12 @@
+<!--商品物流-->
+<view class='top'>
+  <image src='' class='kd-img'></image>
+  <text class='company'>{{company}}</text>
+</view>
+<view class="wuliu-list">
+  <view class='title'>本次数据由 <text style='color:#8cc447;'>快递100</text> 提供</view>
+  <view wx:for="{{wuliu}}" class='wuliu-item'>
+    <view class="order-time"> {{item.ftime}}: </view>
+    <view class = "order-txt"> {{item.context}} </view>
+  </view>
+</view>

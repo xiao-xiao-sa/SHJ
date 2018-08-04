@@ -1,0 +1,14 @@
+<!--pages/integral/consume/consume.wxml-->
+    <view wx:if='{{list && list.length > 0}}'>
+      <view wx:for='{{list}}' class='jf-item'>
+        <view class='top'>{{item.type}}</view>
+        <view class='bot'>
+          <text>{{item.time}}</text>
+          <text>-{{item.num}}分</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if='{{!list || list.length == 0}}' class='no-item'>
+      <image src='/assets/img/no-jf.png'></image>
+      <view>暂无兑换积分</view>
+    </view>

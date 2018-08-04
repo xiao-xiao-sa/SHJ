@@ -1,0 +1,28 @@
+<!--pages/address/newAddress/newAddress.wxml-->
+<!--新曾地址-->
+<form>
+  <view class='row'>
+    <text decode="{{true}}">收&nbsp;货&nbsp;人</text>
+    <input bindinput='listenerNameInput' value='{{address.name}}' bindinput='getName'/>
+  </view>
+  <view class='row'>
+    <text>手机号码</text>
+    <input bindinput='listenerPhoneInput' value='{{address.phone}}' bindinput='getPhone'/>
+  </view>
+  <view class='area'>
+    <picker mode="region" bindchange="bindRegionChange"  value="{{address.region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        <text>所在地区</text> <text wx:for='{{address.region}}'>{{item}}</text>
+      </view>
+    </picker>
+  </view>
+  <view class='detail'>
+    <text>详细地址</text>      
+    <textarea value='{{address.detailed}}' bindinput='getDetailed' placeholder='请输入详细的地址信息，如道路、门牌号、小区、楼栋号、单元室等'></textarea>
+  </view>
+  <view class='default'>
+    <text>设为默认</text>
+    <switch checked='{{address.isDefault}}' bindchange="switchChange" color='#f43333'/>
+  </view>
+  <button class='submit-btn' bindtap='preserve'>保存</button>
+</form>

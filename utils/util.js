@@ -1,3 +1,5 @@
+let session = { sessionId: wx.getStorageSync('sessionId') };
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -14,6 +16,18 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+/*设置请求的消息头，带上sessionId */
+const request = (obj) => {
+  if (obj.header) {
+    obj.header.sessionId = session.sessionId;
+  } else {
+    obj.header = { sessionId: session.sessionId };
+  }
+  wx.request(obj);
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatNumber:formatNumber,
+  request: request
 }

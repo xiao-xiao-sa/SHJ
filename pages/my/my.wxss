@@ -30,6 +30,13 @@
 	color:#fff;
   font-size: 24rpx;
 }
+.header .warrant{
+  width:180rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  margin-top:60rpx;
+}
 .order{
 	width: 100%;
 	background-color: #fff;

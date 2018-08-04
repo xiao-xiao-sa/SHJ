@@ -1,47 +1,47 @@
-// pages/my/my.js
-var app = getApp();
+// pages/integral/get/get.js
+import getIntegral from '../../../assets/data/getIntegral.js';
+var request = require('../../../utils/util.js').request;
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:null,
-    canIUse: false
+    orderNav:['消费积分','分享积分'],
+    currentTab:0,
+    list:{}
   },
-  bindGetUserInfo: function (e) {
-    var userInfo = e.detail.userInfo;
+  changeTab:function(e){
+    var cur = e.currentTarget.dataset.cur;
+    console.log(cur)
     this.setData({
-      userInfo:userInfo,
-      canIUse:true
+      currentTab:cur
     })
-    app.globalData.userInfo = userInfo;
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var userInfo = app.globalData.userInfo;
-    if (userInfo != null) {
-      this.setData({
-        userInfo: userInfo,
-        canIUse: true
-      })
-    }
+    var data = getIntegral.list
+    this.setData({
+      list:data
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+  
   },
 
   /**

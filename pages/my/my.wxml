@@ -2,8 +2,9 @@
 <view class='container'>
 	<view class='header'>
 		<image class='bg' src='../../assets/img/473758441757458630.png'/>
-		<image class='ava' src='{{userInfo.avatarUrl}}'/>
-		<view class='name'>{{userInfo.nickName}}</view>
+		<image wx:if='{{canIUse}}' class='ava' src='{{userInfo.avatarUrl}}'/>
+		<view wx:if='{{canIUse}}' class='name'>{{userInfo.nickName}}</view>
+    <button wx:if='{{!canIUse}}' class='warrant' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">用户授权</button>
 	</view>
 	<view class='order'>
 		<view class='order-top'>
@@ -30,17 +31,17 @@
 		</view>
 	</view>
   <view class='about'>
-    <navigator url='' class='row'>
+    <navigator url='/pages/address/address' class='row'>
       <text class='iconfont icon-dingwei'></text> 
       地址管理 
       <text class='iconfont icon-gengduo'></text>
     </navigator>
-    <navigator url='' class='row'>
+    <navigator url='/pages/integral/get/get' class='row'>
       <text class='iconfont icon-jifen1'></text> 
       积分获得
       <text class='iconfont icon-gengduo'></text>
     </navigator>
-    <navigator url='' class='row'>
+    <navigator url='/pages/integral/consume/consume' class='row'>
       <text class='iconfont icon-jifen'></text> 
       积分消费
       <text class='iconfont icon-gengduo'></text>

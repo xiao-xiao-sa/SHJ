@@ -1,47 +1,38 @@
-// pages/my/my.js
-var app = getApp();
+// pages/integral/consume/consume.js
+import consumeIntegral from '../../../assets/data/consumeIntegral.js';
+var request = require('../../../utils/util.js').request;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:null,
-    canIUse: false
+    list:[]
   },
-  bindGetUserInfo: function (e) {
-    var userInfo = e.detail.userInfo;
-    this.setData({
-      userInfo:userInfo,
-      canIUse:true
-    })
-    app.globalData.userInfo = userInfo;
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var userInfo = app.globalData.userInfo;
-    if (userInfo != null) {
-      this.setData({
-        userInfo: userInfo,
-        canIUse: true
-      })
-    }
+    var data = consumeIntegral.list;
+    this.setData({
+      list:data
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+  
   },
 
   /**

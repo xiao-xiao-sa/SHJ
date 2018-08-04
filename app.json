@@ -4,7 +4,13 @@
     "pages/logs/logs",
     "pages/my/my",
     "pages/shopDetail/shopDetail",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/order/wuliu/wuliu",
+    "pages/order/orderDetail/orderDetail",
+    "pages/address/address",
+    "pages/address/newAddress/newAddress",
+    "pages/integral/consume/consume",
+    "pages/integral/get/get"
   ],
   "window": {
     "backgroundTextStyle": "light",
