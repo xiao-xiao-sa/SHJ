@@ -1,0 +1,57 @@
+<!--pages/order/orderAccount/orderAccount.wxml-->
+<!-- 收件人信息相同 -->
+<view class='user-info'>
+	<text class='iconfont icon-dingwei'></text>
+  <navigator  url='/pages/address/selectAddress/selectAddress'>
+    <view wx:if='{{address!=null}}' class='info-right'>
+      <view class='info-top'>
+        <text>收货人：{{address.name}}</text>
+        <text>{{address.phone}}</text>
+      </view>
+      <view class='info-bottom'><view>收货地址：{{address.region[0]}}{{address.region[1]}}<text wx:if='{{address.region.length==3}}'>{{address.region[2]}}</text>{{address.detailed}}</view> <text class='iconfont icon-gengduo'></text></view>
+    </view>
+    <view class='no-address' wx:if='{{address==null}}'><text>选择收货地址</text> <text class='iconfont icon-gengduo'></text></view>
+  </navigator>
+  
+</view>
+<!--商品信息  -->
+<view  class='order-list'>
+  <view class="order-middle" >
+	  	<image class="order-left" src="{{shopInfo.imgUrl}}"/>
+	  	<view class="order-center">{{shopInfo.title}}</view>
+	  	<view class="order-right">
+	  		<view wx:if='{{shopInfo.shopType == 1}}' class="price"><text>¥</text>{{shopInfo.price}}</view>
+        <view wx:if='{{shopInfo.shopType == 2}}' class="price">{{shopInfo.price}}积分</view>
+	  		<view class="cart-count-box">
+          <text class="cart-count-down" bindtap="minusCount">-</text>
+          <text class="cart-count-num">{{count}}</text>
+          <text class="cart-count-add" bindtap="addCount">+</text>
+        </view>
+	  	</view>
+	</view>
+  <view class='buy-message'>
+    <textarea placeholder='选填：买家留言（50字以内）' bindinput='getMessage'>{{message}}</textarea>
+  </view>
+</view>
+
+<!--商品总价，合计  -->
+<view class='total'>
+  <view class='total-price'>
+    <text>商品总价</text>
+    <text wx:if='{{shopInfo.shopType == 1}}' class='right'>¥{{shopInfo.price*count}}</text>
+    <text wx:if='{{shopInfo.shopType == 2}}' class='right'>{{shopInfo.price*count}}积分</text>
+  </view>
+  <view class='total-freight'>
+    <text>运费</text>
+    <text class='right'>¥{{shopInfo.freight}}</text>
+  </view>
+</view>
+
+<!--点击付款  -->
+<view class='account'>
+  <text wx:if='{{shopInfo.shopType == 1}}'>实付款：¥{{shopInfo.price*count+shopInfo.freight}}</text>
+  <view class='left' wx:if='{{shopInfo.shopType == 2}}'>
+<text decode="{{true}}"> 积分:{{shopInfo.price*count}}&nbsp;&nbsp;&nbsp;&nbsp; 运费:¥{{shopInfo.freight}}</text> 
+  </view>
+  <button bindtap='account'>确认购买</button>
+</view>

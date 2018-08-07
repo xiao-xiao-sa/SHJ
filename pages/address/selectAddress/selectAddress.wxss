@@ -1,0 +1,61 @@
+/* pages/address/selectAddress/selectAddress.wxss */
+.address-item{
+  background-color: #fff;
+  width: 100%;
+  margin-top:20rpx;
+}
+.address-top{
+  width: 100%;
+  box-sizing: border-box;
+  padding:25rpx;
+  border-bottom: 1px solid #efefef;
+}
+.address-user{
+  width:700rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 35rpx;
+}
+.address-detail{
+  width: 700rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding:10rpx 0;
+}
+.address-bottom{
+  width: 100%;
+  padding:0 25rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 90rpx;
+}
+.address-right{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 280rpx;
+}
+.address-bottom text{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.zk{
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.add{
+  background-color: #f43333;
+  width:700rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  color:#fff;
+  font-size: 30rpx;
+  position: fixed;
+  bottom:20rpx;
+  left:25rpx;
+  line-height: 90rpx;
+  text-align: center;
+}

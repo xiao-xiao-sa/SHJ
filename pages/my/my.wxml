@@ -46,7 +46,7 @@
       积分消费
       <text class='iconfont icon-gengduo'></text>
     </navigator>
-    <navigator url='' class='row'>
+    <navigator url='/pages/share/share' class='row'>
       <text class='iconfont icon-fenxiang'></text> 
       分享记录
       <text class='iconfont icon-gengduo'></text>

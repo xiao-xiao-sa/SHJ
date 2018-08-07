@@ -10,7 +10,12 @@
     "pages/address/address",
     "pages/address/newAddress/newAddress",
     "pages/integral/consume/consume",
-    "pages/integral/get/get"
+    "pages/integral/get/get",
+    "pages/share/share",
+    "pages/order/orderAccount/orderAccount",
+    "pages/address/selectAddress/selectAddress",
+    "pages/share/shareNews/shareNews",
+    "pages/share/shareMan/shareMan"
   ],
   "window": {
     "backgroundTextStyle": "light",

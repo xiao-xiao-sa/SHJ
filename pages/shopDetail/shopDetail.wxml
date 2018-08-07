@@ -9,7 +9,8 @@
 <view class='shop-header'>
   <view class='top'>
     <view class='title'>{{shopInfo.title}}</view>
-    <view class='price'><text>￥</text>{{shopInfo.price}}</view>
+    <view wx:if='{{shopInfo.shopType==1}}' class='price'><text>￥</text>{{shopInfo.price}}</view>
+    <view wx:if='{{shopInfo.shopType==2}}' class='price'>{{shopInfo.price}}积分</view>
     <view class='oprice'>原价￥{{shopInfo.originalPrice}}</view>
     <button class='share' open-type="share">
       <text class='iconfont icon-fenxiang'></text>
@@ -27,4 +28,4 @@
   <view>商品详情</view>
   <image src='{{shopInfo.shopDetailImg}}' bindload="shopDIL" style='width:750rpx;height:{{shopDIH}}rpx'></image>
 </view>
-<navigator class='buy' url=''>立即购买</navigator>
+<navigator class='buy' url='/pages/order/orderAccount/orderAccount?shopId={{shopInfo.shopId}}'>立即购买</navigator>

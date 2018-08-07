@@ -1,0 +1,15 @@
+/* pages/share/share.wxss */
+page{
+  background-color: #fff;
+}
+.row{
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2rpx solid #e6e6e6;
+}

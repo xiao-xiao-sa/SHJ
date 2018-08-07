@@ -1,0 +1,18 @@
+<!--pages/share/shareMan/shareMan.wxml-->
+<view class='container'>
+  <view class='man-list' wx:if='{{manList && manList.length>0}}'>
+    <view class='man-item' wx:for='{{manList}}'>
+      <image wx:if='{{item.avatarUrl != ""}}' src='{{item.avatarUrl}}'></image>
+      <image wx:else src='/assets/img/niming@2x.png'></image>
+      <view class='right'>
+        <view wx:if='{{item.nickName != ""}}' class='name'>{{item.nickName}}</view>
+        <view wx:else class='name'>该用户未授权</view>
+        <view class='time'>{{item.endTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='no-share' wx:else>
+    <image src='/assets/img/no-share.png'></image>
+    <view>暂无分享记录</view>
+  </view>
+</view>

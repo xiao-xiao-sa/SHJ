@@ -1,4 +1,7 @@
 // pages/shopDetail/shopDetail.js
+import shopDetail from '/../../assets/data/shopDetail.js';
+var request = require('../../utils/util.js').request;
+
 Page({
 
   /**
@@ -9,18 +12,7 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 1000,
-    shopInfo:{
-      imgUrls: [ //商品详情轮播图片
-        '/assets/img/asdj@2x.png'
-      ],
-      title: "林氏木业北欧沙发家具小户型木框客厅现代简约组合",//标题
-      price:200, //价格
-      originalPrice:300, //原价
-      freight: 1000, //运费
-      sale: 630, //销量
-      surplus: 863, //剩余
-      shopDetailImg: '/assets/img/asdj@2x.png', //商品详情的图片
-    },
+    shopInfo:null,
     shopDIH:0
   },
   shopDIL:function(e){
@@ -36,9 +28,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+    var shopId = options.shopId;
+    if (options.type && options.type == 'share'){
+      //此用户是点击分享页面进入的
+      //分享者的Id:options.userId;
+      //分享时间：options.staTime;
+      var endTime = new Date().getTime();//获取此时的时间作为分享的结束时间
+      //发送后台
+    }
+    this.setData({
+      shopInfo:shopDetail.detail
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -50,14 +54,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    
   },
 
   /**
@@ -84,7 +88,18 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    var staTime = new Date().getTime();
+    //需要获取用户的id
+    var userId = '010';
+    var title = this.data.shopInfo.title;
+    var path = '/pages/shopDetail/shopDetail?shopId=' + this.data.shopInfo.shopId + '&type=share&staTime=' + staTime+'&userId='+userId;
+    return {
+      title: title,
+      path: path,
+      complete:function(res){
+        console.log('提示：点击了分享按钮，但不知值有没有分享成功');
+      }
+    }
   }
 })

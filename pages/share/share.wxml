@@ -1,0 +1,11 @@
+<!--pages/share/share.wxml-->
+<view class='container'>
+  <navigator url='shareNews/shareNews' class='row'>
+    <text>分享信息</text>
+    <text class='iconfont icon-gengduo'></text>
+  </navigator>
+  <navigator url='shareMan/shareMan' class='row'>
+    <text>被分享者信息</text>
+    <text class='iconfont icon-gengduo'></text>
+  </navigator>
+</view>

@@ -1,0 +1,51 @@
+/* pages/share/shareMan/shareMan.wxss */
+page{
+  background-color: #fff;
+}
+.man-list{
+  width: 100%;
+}
+.man-list .man-item{
+  width: 100%;
+  height: 175rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding:20rpx 25rpx;
+  border-top: 2rpx solid #e6e6e6;
+}
+.man-item image{
+  width: 121rpx;
+  height: 121rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  background-color: #666;
+}
+.man-item .right{
+  padding-top:15rpx;
+}
+.man-item .name{
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom:30rpx;
+}
+.man-item .time{
+  font-size: 24rpx;
+  color: #666;
+}
+.no-share{
+  width: 100%;
+}
+.no-share image{
+  width:150rpx;
+  height:150rpx;
+  display: block;
+  margin:200rpx auto 0;
+}
+.no-share view{
+  width: 100%;
+  text-align: center;
+  color: #666;
+  margin-top:10rpx;
+}

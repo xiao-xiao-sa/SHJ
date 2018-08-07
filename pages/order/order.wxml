@@ -67,7 +67,7 @@
 	  				<view class="bottom-one">共{{item.totalCount}}件商品，合计：¥{{item.totalPrice+item.freight}}（含运费¥{{item.freight}}）</view>
 	  				<view class="bottom-two">
 	  					 <button bindtap='cancelOrder' data-orn='{{item.orderNumber}}'>取消订单</button>
-	  					 <button class="green" bindtap='pay' data-orn='{{item.orderNumber}}' data-totalPrice='{{item.totalPrice}}'>付款</button>
+	  					 <button class="green" bindtap='pay' data-orn='{{item.orderNumber}}' data-money='{{item.totalPrice+item.freight}}'>付款</button>
 	  				</view>
 	  			</view>
 	  		</view>

@@ -1,0 +1,16 @@
+<!--pages/share/shareNews/shareNews.wxml-->
+<view class='container'>
+  <view class='share-list' wx:if='{{shopList && shopList.length>0}}'>
+    <view class='share-item' wx:for='{{shopList}}'>
+      <image src='{{item.imgUrl}}'></image>
+      <view class='right'>
+        <view class='title'>{{item.title}}</view>
+        <view class='time'>分享时间：{{item.staTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='no-share' wx:else>
+    <image src='/assets/img/no-share.png'></image>
+    <view>暂无分享记录</view>
+  </view>
+</view>

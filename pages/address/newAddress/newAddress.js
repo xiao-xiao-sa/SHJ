@@ -105,8 +105,8 @@ Page({
           wx.showToast({
             title: '提交成功',
             success: function () {
-              wx.redirectTo({
-                url: '/pages/address/address'
+              wx.navigateBack({
+                delta: 1
               })
             }
           })
@@ -122,6 +122,9 @@ Page({
     //编辑参数id的地址
     if (options && options.id) {
       var id = options.id;
+      wx.setNavigationBarTitle({
+        title: '修改地址'
+      })
       wx.request({
         url: 'https://',
         data: { id: id },
@@ -141,7 +144,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
